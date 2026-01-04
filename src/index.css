@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-c1: #F7F6F1;
+  --color-c2: #F8F9FB;
+  --color-normal: #AAAA99;
+  --color-fire: #FF4422;
+  --color-water: #3399ff;
+  --color-eletric: #FFCC33;
+  --color-grass: #77CC55;
+  --color-ice: #66CCFF;
+  --color-fighting: #B95443;
+  --color-poison: #AA5599;
+  --color-ground: #DDBB55;
+  --color-flying: #8899FF;
+  --color-psychic: #FF5599;
+  --color-bug: #AABB22;
+  --color-rock: #BBAA66;
+  --color-ghost: #6666BB;
+  --color-dragon: #7766EE;
+  --color-dark: #775544;
+  --color-steel: #AAAABB;
+  --color-fairy: #EE99EE;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  background-color: #F7F6F1;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  display: flex;
+  font-size: 2.2em;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
