@@ -24,8 +24,8 @@ function App() {
     { type: "Fairy", color: "#EE99EE" },
   ];
   return (
-    <div className="flex flex-col w-screen h-screen items-center">
-      <header className="bg-linear-to-br from-ice to-dragon w-[65%] p-4 ">
+    <div className="flex flex-col  w-full h-screen justify-start items-center">
+      <header className="w-full bg-linear-to-br from-ice to-dragon p-4 ">
         <div className="flex justify-between">
           <div className="flex items-center">
             <img
@@ -39,30 +39,28 @@ function App() {
             <Star className="w-[1em]" /> <p className="text-xs">Favorites</p>
           </button>
         </div>
-        <p>
-          Explore and discover all generation's pokemons and it's
-          atributes
-        </p>
+        <p>Explore and discover all generation's pokemons and it's atributes</p>
       </header>
-      <main className="w-[65%] px-2 py-2">
-        <h2 className="text-black py-2 text-[1.3em]">Discovered Pokemons</h2>
-        <ul className="flex flex-wrap gap-2">
-          {types.map((types) => (
-            <li key={types.type}>
-              <button
-                style={{
-                  borderColor: types.color,
-                  borderWidth: 2,
-                  color: types.color,
-                }}
-                className="rounded-md py-1 px-2 text-sm"
-              >
-                {types.type}
-              </button>
-            </li>
-          ))}
-        </ul>
-        
+      <main className="w-full px-2 py-2">
+        <nav>
+          <h2 className="text-black py-2 text-[1.3em]">Discovered Pokemons</h2>
+          <ul className="flex flex-wrap gap-2 justify-around">
+            {types.map((types) => (
+              <li key={types.type}>
+                <button
+                  style={{
+                    borderColor: types.color,
+                    borderWidth: 2,
+                    color: types.color,
+                  }}
+                  className="rounded-md py-1 px-2 text-sm"
+                >
+                  {types.type}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </main>
     </div>
   );
